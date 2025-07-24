@@ -1,0 +1,172 @@
+<?php
+/**
+ * This file adds functions to the GreenLight theme for WordPress.
+ *
+ * @package GreenLight
+ * @author  Wpsoul
+ * @license GNU General Public License v2 or later
+ * @link    https://greenlightblocks.com/
+ */
+
+if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
+	define('GREENLIGHT_THEME_VERSION', '1.0');
+}
+if ( !defined( 'GREENLIGHT_THEME_DIR' ) ) {
+	define('GREENLIGHT_THEME_DIR', get_template_directory_uri());
+}
+if ( !defined( 'GREENLIGHT_THEME_PATH' ) ) {
+	define('GREENLIGHT_THEME_PATH', get_template_directory());
+}
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+
+//////////////////////////////////////////////////////////////////
+// Register assets
+//////////////////////////////////////////////////////////////////
+
+add_action('init', 'greenlight_theme_register_assets');
+function greenlight_theme_register_assets(){
+
+	//Main styles
+	wp_register_style( 'greenlight-style', GREENLIGHT_THEME_DIR . '/assets/style.min.css', array(), GREENLIGHT_THEME_VERSION );
+
+
+	//Core styles
+	wp_register_style('greenlight_core_separator', GREENLIGHT_THEME_DIR . '/assets/coreblocks/separator.css', array(), GREENLIGHT_THEME_VERSION);
+	wp_register_style('greenlight_core_code', GREENLIGHT_THEME_DIR . '/assets/coreblocks/code.css', array(), GREENLIGHT_THEME_VERSION);
+	wp_register_style('greenlight_core_comments', GREENLIGHT_THEME_DIR . '/assets/coreblocks/comments.css', array(), GREENLIGHT_THEME_VERSION);
+	wp_register_style('greenlight-comment-query', GREENLIGHT_THEME_DIR . '/assets/coreblocks/commentquery.css', array(), GREENLIGHT_THEME_VERSION);
+	wp_register_style('greenlight_core_table', GREENLIGHT_THEME_DIR . '/assets/coreblocks/table.css', array(), GREENLIGHT_THEME_VERSION);
+	wp_register_style('greenlight_core_postnavigation', GREENLIGHT_THEME_DIR . '/assets/coreblocks/postnavigation.css', array(), GREENLIGHT_THEME_VERSION);
+}
+
+
+//////////////////////////////////////////////////////////////////
+// Register theme support functions
+//////////////////////////////////////////////////////////////////
+
+add_action( 'after_setup_theme', 'greenlight_theme_setuphooks' );
+if ( ! function_exists( 'greenlight_theme_setuphooks' ) ) {
+	function greenlight_theme_setuphooks() {
+
+		// Make theme available for translation.
+		load_theme_textdomain( 'greenlight', GREENLIGHT_THEME_PATH . '/languages' );
+
+		//responsive iframes
+		add_theme_support( 'responsive-embeds' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles and fonts.
+		add_editor_style(
+			array(
+				'./assets/editor.css'
+			)
+		);
+
+		//WP supports
+		add_theme_support(
+			'html5',
+			[
+				'search-form',
+				'comment-form',
+				'comment-list',
+			]
+		);
+
+		// Remove core block patterns.
+		remove_theme_support( 'core-block-patterns' );
+
+		//add conditional assets to core blocks
+		wp_enqueue_block_style( 'core/separator', array('handle'=>'greenlight_core_separator', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/separator.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/code', array('handle'=>'greenlight_core_code', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/code.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/preformatted', array('handle'=>'greenlight_core_code', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/code.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/comments', array('handle'=>'greenlight_core_comments', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/comments.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/table', array('handle'=>'greenlight_core_table', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/table.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+//Assets Render
+//////////////////////////////////////////////////////////////////
+
+// Frontend assets
+add_action( 'wp_enqueue_scripts', 'greenlight_theme_enqueue_style_sheet' );
+function greenlight_theme_enqueue_style_sheet() {
+
+	//global styles
+	wp_enqueue_style( 'greenlight-style');
+
+}
+
+
+//////////////////////////////////////////////////////////////////
+//Includes
+//////////////////////////////////////////////////////////////////
+
+// Include block patterns.
+require GREENLIGHT_THEME_PATH . '/inc/block-patterns.php';
+
+// Include Woocommerce
+if (class_exists('Woocommerce')) {
+require GREENLIGHT_THEME_PATH . '/inc/woocommerce/functions.php';
+}
+
+
+//////////////////////////////////////////////////////////////////
+// Filters
+//////////////////////////////////////////////////////////////////
+
+//Default blank template
+add_filter( 'block_editor_settings_all', function( $settings ) {
+    $settings['defaultBlockTemplate'] = '
+	<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header", "theme":"greenlight"} /-->
+	<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"50px","bottom":"50px","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"contrastcolor","textColor":"basecolor","className":"site-content"} -->
+<main class="wp-block-group site-content has-basecolor-color has-contrastcolor-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:50px;padding-right:0;padding-bottom:50px;padding-left:0">
+		<!-- wp:group {"layout":{"inherit":true}} -->
+		<div class="wp-block-group">
+			<!-- wp:post-title {"level":1,"fontSize":"x-large"} /-->
+		</div>
+		<!-- /wp:group -->
+		<!-- wp:post-content {"align":"full","layout":{"inherit":true}} /-->
+	</main>
+	<!-- /wp:group -->
+	<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer is-style-no-margin", "theme":"greenlight"} /-->
+';
+	return $settings;
+});
+
+function greenlight_display_performance_statistics() {
+    global $wpdb;
+
+    // Get memory usage
+    $memory_usage = size_format(memory_get_usage());
+
+    // Get peak memory usage
+    $peak_memory_usage = size_format(memory_get_peak_usage());
+
+    // Get number of database queries
+    $db_queries = get_num_queries();
+
+    // Get page load time
+    $load_time = timer_stop();
+
+    // Build the output
+    $output = "<div class='performance-stats'>";
+    $output .= "<p><strong>Database Queries:</strong> $db_queries</p>";
+    $output .= "<p><strong>Memory Usage:</strong> $memory_usage</p>";
+    $output .= "<p><strong>Peak Memory Usage:</strong> $peak_memory_usage</p>";
+    $output .= "<p><strong>Page Load Time:</strong> {$load_time} seconds</p>";
+    $output .= "</div>";
+
+    echo $output;
+}
+
+// Hook to display stats at the bottom of the page
+//add_action('wp_footer', 'greenlight_display_performance_statistics');

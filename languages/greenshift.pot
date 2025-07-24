@@ -1,0 +1,809 @@
+# Copyright (C) 2022 ona
+# This file is distributed under the same license as the ona package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: greenlight\n"
+"Report-Msgid-Bugs-To: https://greenlightwp.com/\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Wpsoul <mudderbuster@gmail.com>\n"
+"Language-Team: Wpsoul <mudderbuster@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/admin_menu/onboard.php:19
+msgid "Brand settings"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:22
+msgid "HomePage settings"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:25
+msgid "Select Header Pattern"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:28
+msgid "Select Footer Pattern"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:31
+msgid "Select Single Post template"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:34
+msgid "Select Archive template"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:37
+msgid "Select Single Product template"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:40
+msgid "Select archive Product template"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:43
+msgid "Select Search Product template"
+msgstr ""
+
+#: inc/admin_menu/onboard.php:46
+msgid "Create Extra Pages"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:243
+msgid "Selecting Archive template will overwrite your existing template. You can edit elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:244
+#: inc/admin_menu/onboard/archiveproduct.php:227
+#: inc/admin_menu/onboard/footer.php:222 inc/admin_menu/onboard/header.php:235
+#: inc/admin_menu/onboard/home.php:239
+#: inc/admin_menu/onboard/searchproduct.php:224
+#: inc/admin_menu/onboard/single.php:249
+#: inc/admin_menu/onboard/singleproduct.php:251
+msgid "Site Editor"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:249
+msgid "Your archive displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:256
+#: inc/admin_menu/onboard/archiveproduct.php:251
+msgid "Current archive"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:260
+msgid "Archive Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:265
+msgid "Simple Grid"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:271
+msgid "Blog List"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:277
+msgid "Grid with Shadow"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:282
+msgid "Cover on image"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:337
+#: inc/admin_menu/onboard/archiveproduct.php:316
+#: inc/admin_menu/onboard/brand.php:197 inc/admin_menu/onboard/footer.php:330
+#: inc/admin_menu/onboard/header.php:351 inc/admin_menu/onboard/home.php:312
+#: inc/admin_menu/onboard/pages.php:462
+#: inc/admin_menu/onboard/searchproduct.php:313
+#: inc/admin_menu/onboard/single.php:330
+#: inc/admin_menu/onboard/singleproduct.php:343
+msgid "Save"
+msgstr ""
+
+#: inc/admin_menu/onboard/archive.php:340
+#: inc/admin_menu/onboard/archiveproduct.php:319
+#: inc/admin_menu/onboard/brand.php:198 inc/admin_menu/onboard/footer.php:333
+#: inc/admin_menu/onboard/header.php:352 inc/admin_menu/onboard/home.php:315
+#: inc/admin_menu/onboard/pages.php:465
+#: inc/admin_menu/onboard/searchproduct.php:316
+#: inc/admin_menu/onboard/single.php:331
+#: inc/admin_menu/onboard/singleproduct.php:344
+msgid "Save and Continue"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:226
+msgid "Selecting archive product template will overwrite your existing template. You can edit elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:236
+#: inc/admin_menu/onboard/searchproduct.php:233
+#: inc/admin_menu/onboard/singleproduct.php:260
+msgid "This option requires to have GreenLight Query and Woocommerce addon"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:237
+#: inc/admin_menu/onboard/searchproduct.php:234
+#: inc/admin_menu/onboard/singleproduct.php:261
+msgid "Check your Addons"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:238
+#: inc/admin_menu/onboard/searchproduct.php:235
+#: inc/admin_menu/onboard/singleproduct.php:262
+msgid "Buy Woocommerce plan (includes Woo and Query addon)"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:244
+#: inc/admin_menu/onboard/searchproduct.php:241
+msgid "Your archive shop displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:255
+msgid "Shop Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/archiveproduct.php:260
+msgid "Improved Shop page"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:71
+msgid "You can add unlimited extra colors and configure additional global elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:87
+msgid "Site Title"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:91
+msgid "Add name for site"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:97
+msgid "Site Description"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:101
+msgid "Add description for site"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:107
+msgid "Site Logo"
+msgstr ""
+
+#: inc/admin_menu/onboard/brand.php:153
+msgid "Site Icon"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:221
+msgid "Attention. Selecting footer will overwrite your footer template. Hover on title to preview it. You can edit footer elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:226
+msgid "Your footer displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:233
+msgid "Current Footer"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:237
+msgid "Footer Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:244
+msgid "Footer with banner"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:252
+msgid "Footer 5 Column"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:260
+msgid "Footer Simple"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:268
+msgid "Footer with transparent background"
+msgstr ""
+
+#: inc/admin_menu/onboard/footer.php:276
+msgid "Mega Footer"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:234
+msgid "Selecting header will overwrite your header template. Hover on title to preview it. You can edit header elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:239
+msgid "Your header displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:246
+msgid "Current Header"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:250
+msgid "Header Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:257
+msgid "Header Centered"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:265
+msgid "Header With search icon"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:273
+msgid "Header With two zones"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:281
+msgid "Dark header"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:289
+msgid "Header With Button"
+msgstr ""
+
+#: inc/admin_menu/onboard/header.php:297
+msgid "Header Simple"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:200
+msgid "Home"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:224
+msgid "Select How you want to show your Home page. You can change this later"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:231
+msgid "Your homepage displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:239
+msgid "Homepage Template"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:239
+msgid "You can edit template later in"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:245
+msgid "A custom page and template library"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:252
+msgid "Select a page"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:260
+msgid "Create New Home Page"
+msgstr ""
+
+#: inc/admin_menu/onboard/home.php:261
+msgid "Edit Home Page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:407
+msgid "Select if you want to create extra pages"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:416
+msgid "Blog Page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:423
+msgid "Contact Us"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:430
+msgid "Price page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:437
+msgid "Team page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:444
+msgid "Product Comparison Results Page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:447
+msgid "Product Comparison requires Woocommerce addon"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:452
+msgid "Wishlist page"
+msgstr ""
+
+#: inc/admin_menu/onboard/pages.php:455
+msgid "Wishlist requires Query addon"
+msgstr ""
+
+#: inc/admin_menu/onboard/searchproduct.php:223
+msgid "Selecting Search product template will overwrite your existing template. You can edit elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/searchproduct.php:248
+msgid "Current Search template"
+msgstr ""
+
+#: inc/admin_menu/onboard/searchproduct.php:252
+msgid "Search Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/searchproduct.php:257
+msgid "Improved Search page"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:248
+msgid "Selecting single page template will overwrite your existing template. You can edit elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:254
+msgid "Your single displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:261
+#: inc/admin_menu/onboard/singleproduct.php:274
+msgid "Current single"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:265
+#: inc/admin_menu/onboard/singleproduct.php:278
+msgid "Single Default"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:270
+msgid "Single with Cover block"
+msgstr ""
+
+#: inc/admin_menu/onboard/single.php:276
+msgid "Single with negative margin"
+msgstr ""
+
+#: inc/admin_menu/onboard/singleproduct.php:250
+msgid "Selecting single product template will overwrite your existing template. You can edit elements in"
+msgstr ""
+
+#: inc/admin_menu/onboard/singleproduct.php:267
+msgid "Your single product displays"
+msgstr ""
+
+#: inc/admin_menu/onboard/singleproduct.php:283
+msgid "Single Improved"
+msgstr ""
+
+#: inc/admin_menu/onboard/singleproduct.php:289
+msgid "Single with 2 column gallery"
+msgstr ""
+
+#: inc/admin_menu/settings.php:28 inc/admin_menu/welcome-page.php:1003
+msgid "To get Full Power of this theme, please, install GreenLight Companion plugin"
+msgstr ""
+
+#: inc/admin_menu/settings.php:30 inc/admin_menu/welcome-page.php:1005
+msgid "Install Core GreenLight plugin"
+msgstr ""
+
+#: inc/admin_menu/settings.php:75 inc/admin_menu/settings.php:76
+#: inc/admin_menu/settings.php:219
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/admin_menu/settings.php:225
+msgid "Brand Settings"
+msgstr ""
+
+#: inc/admin_menu/settings.php:229
+msgid "Homepage Settings"
+msgstr ""
+
+#: inc/admin_menu/settings.php:233
+msgid "Header pattern"
+msgstr ""
+
+#: inc/admin_menu/settings.php:237
+msgid "Footer pattern"
+msgstr ""
+
+#: inc/admin_menu/settings.php:241
+msgid "Create Extra pages"
+msgstr ""
+
+#: inc/admin_menu/settings.php:245
+msgid "Extra Template Settings"
+msgstr ""
+
+#: inc/admin_menu/settings.php:249
+msgid "Single post template"
+msgstr ""
+
+#: inc/admin_menu/settings.php:253
+msgid "Post Archive template"
+msgstr ""
+
+#: inc/admin_menu/settings.php:259
+msgid "Single Product template"
+msgstr ""
+
+#: inc/admin_menu/settings.php:263
+msgid "Shop archive template"
+msgstr ""
+
+#: inc/admin_menu/settings.php:267
+msgid "Search Product template"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:990
+msgid "Welcome to GreenLight"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:994
+msgid "Block Theme for WordPress"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:998
+msgid "Thank you for installing theme and GreenLight plugin"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:1000
+msgid "Theme Configuration"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:1023
+msgid "Get started with Learning Center"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:1033
+msgid "All about FSE workflow"
+msgstr ""
+
+#: inc/admin_menu/welcome-page.php:1043
+msgid "Visit our Video Center"
+msgstr ""
+
+#: inc/block-patterns.php:17
+msgid "GreenLight"
+msgstr ""
+
+#: inc/block-patterns.php:22
+msgid "GreenLight Footer"
+msgstr ""
+
+#: inc/block-patterns.php:26
+msgid "GreenLight General"
+msgstr ""
+
+#: inc/block-patterns.php:30
+msgid "GreenLight Header"
+msgstr ""
+
+#: inc/block-patterns.php:34
+msgid "GreenLight Hero Headers"
+msgstr ""
+
+#: inc/block-patterns.php:38
+msgid "GreenLight Parts"
+msgstr ""
+
+#: inc/block-patterns.php:42
+msgid "GreenLight Query"
+msgstr ""
+
+#: inc/block-styles.php:25
+msgid "Sliding Gradient"
+msgstr ""
+
+#: inc/block-styles.php:33
+msgid "Secondary button"
+msgstr ""
+
+#: inc/block-styles.php:41
+msgid "3d Button light"
+msgstr ""
+
+#: inc/block-styles.php:49
+msgid "3d Button dark"
+msgstr ""
+
+#: inc/block-styles.php:58
+msgid "System light"
+msgstr ""
+
+#: inc/block-styles.php:66
+msgid "System dark"
+msgstr ""
+
+#: inc/block-styles.php:75
+msgid "Unstyled view"
+msgstr ""
+
+#: inc/block-styles.php:82
+msgid "Full background"
+msgstr ""
+
+#: inc/block-styles.php:89
+msgid "Blur background"
+msgstr ""
+
+#: inc/block-styles.php:99
+msgid "Accent Button"
+msgstr ""
+
+#: inc/block-styles.php:106
+msgid "Primary Color Button"
+msgstr ""
+
+#: inc/block-styles.php:113
+msgid "Secondary Color Button"
+msgstr ""
+
+#: inc/block-styles.php:120
+msgid "Primary 3d Button"
+msgstr ""
+
+#: inc/block-styles.php:128 inc/block-styles.php:144
+msgid "No Margin"
+msgstr ""
+
+#: inc/block-styles.php:135
+msgid "Shadow on hover"
+msgstr ""
+
+#: inc/block-styles.php:151
+msgid "Half negative offset"
+msgstr ""
+
+#: inc/block-styles.php:158
+msgid "Shadow radius"
+msgstr ""
+
+#: inc/block-styles.php:167 inc/block-styles.php:175
+msgid "Gradient mask"
+msgstr ""
+
+#: inc/block-styles.php:185
+msgid "Colored tags"
+msgstr ""
+
+#: inc/block-styles.php:192
+msgid "Rounded border"
+msgstr ""
+
+#: inc/block-styles.php:199
+msgid "Rounded grey"
+msgstr ""
+
+#: inc/block-styles.php:206
+msgid "Underline on hover"
+msgstr ""
+
+#: inc/block-styles.php:213 inc/block-styles.php:220
+msgid "Inline List"
+msgstr ""
+
+#: inc/block-styles.php:228
+msgid "Floating search bar on click"
+msgstr ""
+
+#: inc/block-styles.php:236
+msgid "Header search"
+msgstr ""
+
+#: inc/block-styles.php:242
+msgid "Creative overlay"
+msgstr ""
+
+#: inc/block-styles.php:246
+msgid "Rounded border box"
+msgstr ""
+
+#: inc/block-styles.php:254 inc/block-styles.php:268
+msgid "Show two lines"
+msgstr ""
+
+#: inc/block-styles.php:261 inc/block-styles.php:275
+msgid "Show three lines"
+msgstr ""
+
+#: inc/block-styles.php:282
+msgid "Mega columned menu"
+msgstr ""
+
+#: inc/block-styles.php:289
+msgid "Mega menu Open on left"
+msgstr ""
+
+#: inc/block-styles.php:296
+msgid "Theme search style"
+msgstr ""
+
+#: inc/block-styles.php:303
+msgid "Theme search with round corners"
+msgstr ""
+
+#: inc/block-styles.php:310 inc/block-styles.php:317 inc/block-styles.php:324
+msgid "Hide on mobile and tablets"
+msgstr ""
+
+#: inc/block-styles.php:332
+msgid "Soft Border radius"
+msgstr ""
+
+#: inc/woocommerce/functions.php:161
+msgid "PROS:"
+msgstr ""
+
+#: inc/woocommerce/functions.php:161
+msgid "CONS:"
+msgstr ""
+
+#: inc/woocommerce/functions.php:202 inc/woocommerce/functions.php:237
+#: inc/woocommerce/functions.php:287
+msgid "+ PROS:"
+msgstr ""
+
+#: inc/woocommerce/functions.php:210 inc/woocommerce/functions.php:241
+#: inc/woocommerce/functions.php:290
+msgid "- CONS:"
+msgstr ""
+
+#: inc/woocommerce/functions.php:223
+msgid "Pros and Cons"
+msgstr ""
+
+#: inc/woocommerce/functions.php:275
+msgid "Product Review"
+msgstr ""
+
+#: patterns/hero-two.php:27
+msgid "Sample Image"
+msgstr ""
+
+#: patterns/parts-error.php:11
+msgid "Not found, error 404"
+msgstr ""
+
+#: patterns/parts-error.php:15
+msgid "Oops, the page you are looking for does not exist or is no longer available. Everything is still awesome. Just use the search form to find your way."
+msgstr ""
+
+#: patterns/parts-index.php:11
+msgid "Check latest"
+msgstr ""
+
+#: patterns/parts-indextext.php:10
+msgid "The latest items"
+msgstr ""
+
+#: patterns/parts-indextext.php:14
+msgid "Find our latest news, tutorials, knowledge database case studies and videos"
+msgstr ""
+
+#: patterns/parts-indextext.php:153
+msgid "Check all posts"
+msgstr ""
+
+#: patterns/parts-noresults.php:9
+msgid "Add text or blocks that will display when the query returns no results."
+msgstr ""
+
+#: patterns/parts-noresults.php:10
+msgid "No results matching your criteria"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:40
+#, php-format
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product-reviews.php:45
+msgid "User Reviews"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:52
+msgid "out of"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:56
+#, php-format
+msgid "Rated %s out of"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:68
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:102
+msgid "Write a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:134
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:149
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:149
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:150
+msgid "Leave a Reply"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:153
+msgid "Name"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:155
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:158
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:164
+#, php-format
+msgid "You must be %1$s%2$s%3$s logged in %4$s to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:180
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:181
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:182
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:183
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:184
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:185
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:186
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:192
+msgid "Your Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:199
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr ""

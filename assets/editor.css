@@ -1,0 +1,500 @@
+@font-face {
+	font-display: swap;
+	font-family: star;
+	src: url(woocommerce/css/fonts/star.eot);
+	src: url(woocommerce/css/fonts/star.eot?#iefix) format("embedded-opentype"), url(woocommerce/css/fonts/star.woff) format("woff"), url(woocommerce/css/fonts/star.ttf) format("truetype"), url(woocommerce/css/fonts/star.svg#star) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: WooCommerce;
+	src: url(woocommerce/css/fonts/WooCommerce.eot);
+	src: url(woocommerce/css/fonts/WooCommerce.eot?#iefix) format("embedded-opentype"), url(woocommerce/css/fonts/WooCommerce.woff) format("woff"), url(woocommerce/css/fonts/WooCommerce.ttf) format("truetype"), url(woocommerce/css/fonts/WooCommerce.svg#WooCommerce) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+:root {
+	--greenlight-transition: cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+
+footer.wp-block-template-part {
+	margin-block-start: 0;
+}
+
+img.alignleft {
+	margin-right: 2em;
+}
+
+img.alignright {
+	margin-left: 2em;
+}
+
+.site-content {
+	min-height: 400px;
+}
+
+.edit-post-visual-editor__post-title-wrapper h1 {
+	font-size: var(--wp--preset--font-size--xl)
+}
+
+/* Code
+--------------------------------------------- */
+
+.wp-block-code code,
+.wp-block-preformatted {
+	overflow-wrap: normal;
+	overflow-x: scroll;
+	white-space: pre;
+}
+
+/* Comments
+--------------------------------------------- */
+
+.wp-block-post-comments input:not([type=submit]),
+.wp-block-post-comments textarea {
+	border-color: var(--wp--preset--color--lightborder);
+}
+
+.wp-block-post-comments .commentlist {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.wp-block-post-comments .form-submit {
+	margin-bottom: 0;
+}
+
+.wp-block-post-comments .comment-form-cookies-consent {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-post-comments .comment-author .avatar {
+	height: 48px;
+	margin-top: 2px;
+	width: 48px;
+}
+
+.comment-metadata,
+.wp-block-post-comments .reply,
+.logged-in-as,
+.comment-reply-title small a {
+	font-size: 75%;
+	opacity: 0.5;
+}
+
+.has-additional-background-color.wp-block-post-comments {
+	padding: 1.5em
+}
+
+.comment-metadata>a,
+.comment-author a {
+	text-decoration: none;
+}
+
+.wp-block-post-comments .commentlist .children {
+	position: relative
+}
+
+.wp-block-post-comments .commentlist .children:before {
+	position: absolute;
+	content: "↑";
+	left: -40px;
+	opacity: .3;
+}
+
+
+/* Separator
+--------------------------------------------- */
+
+.wp-block-separator {
+	opacity: 1;
+}
+
+.wp-block-separator:not(.is-style-dots),
+.wp-block-separator.has-background:not(.is-style-dots) {
+	border-bottom: 1px solid currentColor;
+	height: 1px;
+}
+
+.wp-block-separator.is-style-dots:before {
+	font-family: inherit;
+	font-size: var(--wp--preset--font-size--large);
+	letter-spacing: 10px;
+	padding-left: 10px;
+}
+
+/* Table
+--------------------------------------------- */
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+}
+
+.wp-block-table table {
+	border-collapse: collapse;
+}
+
+.wp-block-table thead {
+	border-bottom: 3px solid var(--wp--preset--color--black);
+}
+
+.wp-block-table tfoot {
+	border-top: 3px solid var(--wp--preset--color--black);
+}
+
+.wp-block-table td,
+.wp-block-table th,
+.wp-block-table tr,
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes tr {
+	border: 1px solid var(--wp--preset--color--black);
+}
+
+.wp-block-table th {
+	font-weight: var(--wp--custom--font-weight--normal);
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	padding: 6px 12px;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--wp--preset--color--lightbg);
+}
+
+
+/*comments*/
+.wp-block-post-comments input[type=submit],
+.wp-block-post-comments-form input.submit {
+	background-color: var(--wp--preset--color--primary);
+	border: 1px solid transparent;
+	border-radius: 0;
+	color: var(--wp--preset--color--textonprimary);
+	cursor: pointer;
+	font-family: var(--wp--preset--font-family--primary);
+	font-size: var(--wp--preset--font-size--small) !important;
+	padding: 10px 25px;
+	text-decoration: none;
+	white-space: normal;
+	width: auto !important
+}
+
+img {
+	max-width: 100%;
+	height: auto
+}
+
+.wp-block-comment-template p {
+	margin-bottom: 0
+}
+
+.wp-block-comment-template .wp-block-comment-content p,
+.wp-block-comment-template .comment-respond p {
+	margin-bottom: 25px
+}
+
+.wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
+.wp-block-post-comments-form textarea {
+	border-color: var(--wp--preset--color--lightborder);
+	font-size: .875em
+}
+
+.wp-block-comments-pagination-numbers {
+	display: flex;
+	gap: 12px
+}
+
+.wp-block-comment-template ol {
+	padding-left: 60px;
+	position: relative
+}
+
+.wp-block-comment-author-name a {
+	text-decoration: none
+}
+
+.wp-block-comment-template ol:before {
+	position: absolute;
+	content: "↑";
+	left: 20px;
+	opacity: .3;
+}
+
+.logged-in-as {
+	font-size: 75%;
+	opacity: .5;
+}
+
+#reply-title {
+	font-size: 20px;
+	font-weight: normal
+}
+
+#reply-title small {
+	font-size: 16px
+}
+
+.gs-header-alpha {
+	position: absolute !important;
+	left: 0;
+	right: 0;
+	z-index: 999 !important;
+}
+
+.has-modal-open .gs-header-alpha {
+	z-index: 100001;
+}
+
+.gs-header-alpha:not(.gs-sticky-enable)>div {
+	background: transparent !important
+}
+
+.gs-label-text,
+.wp-block-navigation-item__content>s,
+.wp-block-navigation-item__label>s {
+	border-radius: 100px !important;
+	padding: 2px 8px;
+	text-decoration: none;
+	line-height: 20px;
+	font-size: var(--wp--preset--font-size--xsmall);
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--textonprimary) !important;
+}
+
+/*Woocommerce Gutenberg*/
+
+
+.wc-block-components-product-rating__stars span:before,
+.woocommerce .star-rating span::before,
+.wc-block-grid__product .wc-block-grid__product-rating span:before {
+	color: orange
+}
+
+.wc-block-components-product-rating__stars,
+.wc-block-grid__product .wc-block-grid__product-rating {
+	color: var(--wp--preset--color--lightgrey)
+}
+
+.wc-block-product-search__fields input {
+	padding: 6px 8px;
+	line-height: 1.8;
+	font-size: var(--wp--preset--font-size--small);
+	border: 1px solid var(--wp--preset--color--lightborder);
+	font-family: var(--wp--preset--font-family--primary);
+}
+
+.wc-block-cart-item__wrap {
+	padding: 10px 20px
+}
+
+.wc-block-components-product-low-stock-badge {
+	border: 1px solid #69c469;
+	color: #69c469;
+	font-size: .5em;
+}
+
+table.wc-block-mini-cart-items tbody td {
+	border-top: 1px solid #0000001c
+}
+
+.wc-block-components-product-name,
+.wc-block-grid__product-link {
+	text-decoration: none
+}
+
+.wp-block-woocommerce-mini-cart-contents h2.wc-block-mini-cart__title {
+	text-align: center;
+}
+
+.woocommerce-breadcrumb {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+.woocommerce.wc-block-catalog-sorting select.orderby {
+	vertical-align: top;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px
+}
+
+.wc-block-components-product-price del {
+	color: inherit;
+	opacity: .5;
+	display: inline-block;
+	order: 2;
+	transform: scale(.9)
+}
+
+.wc-block-components-product-sale-badge,
+.woocommerce span.onsale,
+.wc-block-grid__product-onsale {
+	padding: 5px 7px;
+	text-align: center;
+	line-height: 1;
+	margin: 0;
+	border-radius: 2px;
+	background-color: var(--wp--preset--color--accent);
+	color: #fff;
+	font-size: .7em;
+	z-index: 9;
+	border: none
+}
+
+.wc-block-grid__product-onsale {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	left: auto
+}
+
+.wc-block-components-checkbox .wc-block-components-checkbox__input[type=checkbox] {
+	width: 1.2em;
+	height: 1.2em;
+	min-width: 1.2em;
+	min-height: 1.2em;
+	border: 1px solid var(--wp--preset--color--lightgrey)
+}
+
+.wc-block-components-checkbox .wc-block-components-checkbox__mark {
+	height: 1em;
+	margin-left: .1em;
+	width: 1em
+}
+
+.wc-block-components-checkbox .wc-block-components-checkbox__label,
+.wc-block-components-checkbox>span {
+	line-height: 1.2em;
+}
+
+.wc-block-components-checkbox {
+	margin-top: 0.6em
+}
+
+.wp-block-woocommerce-price-filter,
+.wc-block-components-chip {
+	border-color: var(--wp--preset--color--lightgrey)
+}
+
+.wc-block-components-price-slider__range-input-progress {
+	--range-color: var(--wp--preset--color--primary)
+}
+
+.wc-block-components-price-slider__controls .wc-block-components-price-slider__amount {
+	padding: 4px 7px;
+	font-size: var(--wp--preset--font-size--xsmall);
+}
+
+.wc-block-active-filters .wc-block-active-filters__clear-all,
+.wc-block-components-filter-reset-button {
+	font-size: var(--wp--preset--font-size--xsmall);
+}
+
+.wc-block-active-filters {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 10px
+}
+
+.wc-block-active-filters .wc-block-active-filters__clear-all {
+	margin: 0
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+	padding: 20px;
+	border: 2px solid var(--wp--preset--color--lightborder);
+	background: #00000003
+}
+
+.wc-block-components-checkout-step--with-step-number .wc-block-components-checkout-step__container:after {
+	border-color: var(--wp--preset--color--lightgrey)
+}
+
+.wc-block-components-order-summary .wc-block-components-order-summary-item__quantity {
+	background: var(--wp--preset--color--accent);
+	color: #fff;
+	border: none
+}
+
+.wc-block-components-panel__button[aria-expanded=true] {
+	padding-bottom: 1em;
+	margin-bottom: 20px;
+}
+
+.wc-block-components-order-summary-item__description .wc-block-components-product-metadata {
+	font-size: 14px;
+	opacity: 0.8
+}
+
+.wc-block-components-order-summary-item__image>img {
+	min-width: 48px
+}
+
+.wp-block-woocommerce-checkout-order-summary-cart-items-block:after {
+	border: none;
+}
+.wc-blocks-components-select .wc-blocks-components-select__select{border-color: var(--wp--preset--color--lightborder)}.wc-block-components-checkout-step__description{opacity:0.6}
+
+.wc-block-components-totals-wrapper:after,
+.wc-block-components-form .wc-block-components-text-input input[type=email],
+.wc-block-components-form .wc-block-components-text-input input[type=number],
+.wc-block-components-form .wc-block-components-text-input input[type=tel],
+.wc-block-components-form .wc-block-components-text-input input[type=text],
+.wc-block-components-form .wc-block-components-text-input input[type=url],
+.wc-block-components-text-input input[type=email],
+.wc-block-components-text-input input[type=number],
+.wc-block-components-text-input input[type=tel],
+.wc-block-components-text-input input[type=text],
+.wc-block-components-text-input input[type=url],
+.wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input,
+.wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input {
+	border-color: var(--wp--preset--color--lightborder)
+}
+
+.wc-block-product-categories__dropdown select {
+	border: 1px solid var(--wp--preset--color--lightborder);
+	border-radius: 0;
+	width: 100%;
+	padding: 9px 15px;
+	transition: border-color .3s var(--greenlight-transition), background-color .3s var(--greenlight-transition);
+	background-color: var(--wp--preset--color--inputbg);
+	border-radius: 0;
+	color: var(--wp--preset--color--inputtext);
+	font-weight: var(--wp--custom--font-weight--normal);
+	font-family: var(--wp--preset--font-family--primary);
+	font-size: var(--wp--preset--font-size--small);
+	line-height: var(--wp--custom--line-height--medium)
+}
+
+.wc-block-editor-add-to-cart-form__button {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 17px;
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--textonprimary);
+	line-height: 17px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 14px 22px;
+	text-transform: uppercase;
+	position: relative;
+	height: auto;
+	text-decoration: none;
+	white-space: normal;
+	width: auto;
+}
+
+.wc-block-add-to-cart-form .wc-block-components-skeleton {
+	margin-bottom: 30px
+}
+
+.wc-block-store-notices .components-notice {
+	margin: 0 0 20px 0
+}

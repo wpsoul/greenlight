@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Black",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "brand",
+					"color": "#0FA034"
+				},
+				{
+					"name": "Brand Hover Color",
+					"slug": "brand-hover",
+					"color": "#15BA3F"
+				},
+				{
+					"name": "Text on Brand",
+					"slug": "text-on-brand",
+					"color": "#fffffc"
+				},
+				{
+					"name": "Text on Brand Hover",
+					"slug": "text-on-brand-hover",
+					"color": "#fffffd"
+				},
+				{
+					"name": "Secondary Color",
+					"slug": "secondary",
+					"color": "#82A5AF"
+				},
+				{
+					"name": "Content Text Color",
+					"slug": "text",
+					"color": "#fcfcfc"
+				},
+				{
+					"name": "Heading Color",
+					"slug": "heading",
+					"color": "#fdfdfd"
+				},
+				{
+					"name": "Border Color",
+					"slug": "border",
+					"color": "#00000012"
+				},
+				{
+					"name": "Background Color",
+					"slug": "background",
+					"color": "#333"
+				},
+				{
+					"name": "Card Background Color",
+					"slug": "card-background",
+					"color": "#111"
+				},
+				{
+					"name": "Card Border Color",
+					"slug": "card-border",
+					"color": "#333"
+				},
+				{
+					"name": "Card Text Color",
+					"slug": "card-text",
+					"color": "#fff"
+				},
+				{
+					"name": "Base Color",
+					"slug": "base",
+					"color": "#fffffe"
+				},
+				{
+					"name": "Contrast Color",
+					"slug": "contrast",
+					"color": "#222222"
+				}
+			]
+		}
+	}
+}

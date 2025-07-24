@@ -1,0 +1,29 @@
+:root {
+    --greenlight-transition: cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+* {
+    box-sizing: border-box
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+td,th{border:1px solid var(--wp--preset--color--border);padding: 6px 12px;}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+img.alignleft {
+    margin-right: 2em
+}
+
+img.alignright {
+    margin-left: 2em
+}
+
+footer.wp-block-template-part{margin-block-start: 0;}
