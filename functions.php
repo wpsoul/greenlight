@@ -9,7 +9,7 @@
  */
 
 if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
-	define('GREENLIGHT_THEME_VERSION', '1.0');
+	define('GREENLIGHT_THEME_VERSION', '1.1');
 }
 if ( !defined( 'GREENLIGHT_THEME_DIR' ) ) {
 	define('GREENLIGHT_THEME_DIR', get_template_directory_uri());
@@ -32,12 +32,29 @@ function greenlight_theme_register_assets(){
 
 
 	//Core styles
-	wp_register_style('greenlight_core_separator', GREENLIGHT_THEME_DIR . '/assets/coreblocks/separator.css', array(), GREENLIGHT_THEME_VERSION);
-	wp_register_style('greenlight_core_code', GREENLIGHT_THEME_DIR . '/assets/coreblocks/code.css', array(), GREENLIGHT_THEME_VERSION);
 	wp_register_style('greenlight_core_comments', GREENLIGHT_THEME_DIR . '/assets/coreblocks/comments.css', array(), GREENLIGHT_THEME_VERSION);
 	wp_register_style('greenlight-comment-query', GREENLIGHT_THEME_DIR . '/assets/coreblocks/commentquery.css', array(), GREENLIGHT_THEME_VERSION);
 	wp_register_style('greenlight_core_table', GREENLIGHT_THEME_DIR . '/assets/coreblocks/table.css', array(), GREENLIGHT_THEME_VERSION);
 	wp_register_style('greenlight_core_postnavigation', GREENLIGHT_THEME_DIR . '/assets/coreblocks/postnavigation.css', array(), GREENLIGHT_THEME_VERSION);
+
+	register_block_style(
+        'core/group',
+        array(
+            'name'  => 'no-margin',
+            'label' => __('No margin', 'greenlight'),
+            'inline_style' => '.wp-block-group.is-style-no-margin {margin-top:0;margin-bottom:0;}',
+        )
+    );
+
+	register_block_style(
+        'core/list',
+        array(
+            'name'  => 'nounderline',
+            'label' => __('Unstyled view', 'greenlight'),
+            'inline_style' => 'ul.is-style-nounderline {margin:0; padding:0;list-style:none}ul.is-style-nounderline a{text-decoration:none}ul.is-style-nounderline li{list-style:none}',
+        )
+    );
+
 }
 
 
@@ -51,6 +68,8 @@ if ( ! function_exists( 'greenlight_theme_setuphooks' ) ) {
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'greenlight', GREENLIGHT_THEME_PATH . '/languages' );
+
+		add_theme_support('editor-color-palette', array());
 
 		//responsive iframes
 		add_theme_support( 'responsive-embeds' );
@@ -82,11 +101,10 @@ if ( ! function_exists( 'greenlight_theme_setuphooks' ) ) {
 		remove_theme_support( 'core-block-patterns' );
 
 		//add conditional assets to core blocks
-		wp_enqueue_block_style( 'core/separator', array('handle'=>'greenlight_core_separator', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/separator.css', 'version'=> GREENLIGHT_THEME_VERSION) );
-		wp_enqueue_block_style( 'core/code', array('handle'=>'greenlight_core_code', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/code.css', 'version'=> GREENLIGHT_THEME_VERSION) );
-		wp_enqueue_block_style( 'core/preformatted', array('handle'=>'greenlight_core_code', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/code.css', 'version'=> GREENLIGHT_THEME_VERSION) );
 		wp_enqueue_block_style( 'core/comments', array('handle'=>'greenlight_core_comments', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/comments.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/comments-query-loop', array('handle'=>'greenlight-comment-query', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/commentquery.css', 'version'=> GREENLIGHT_THEME_VERSION) );
 		wp_enqueue_block_style( 'core/table', array('handle'=>'greenlight_core_table', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/table.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		wp_enqueue_block_style( 'core/post-navigation-link', array('handle'=>'greenlight_core_postnavigation', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/postnavigation.css', 'version'=> GREENLIGHT_THEME_VERSION) );
 
 	}
 }
@@ -127,8 +145,8 @@ require GREENLIGHT_THEME_PATH . '/inc/woocommerce/functions.php';
 add_filter( 'block_editor_settings_all', function( $settings ) {
     $settings['defaultBlockTemplate'] = '
 	<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header", "theme":"greenlight"} /-->
-	<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"50px","bottom":"50px","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"contrastcolor","textColor":"basecolor","className":"site-content"} -->
-<main class="wp-block-group site-content has-basecolor-color has-contrastcolor-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:50px;padding-right:0;padding-bottom:50px;padding-left:0">
+	<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"50px","bottom":"50px","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"className":"site-content"} -->
+<main class="wp-block-group site-content" style="margin-top:0;margin-bottom:0;padding-top:50px;padding-right:0;padding-bottom:50px;padding-left:0">
 		<!-- wp:group {"layout":{"inherit":true}} -->
 		<div class="wp-block-group">
 			<!-- wp:post-title {"level":1,"fontSize":"x-large"} /-->
@@ -170,3 +188,41 @@ function greenlight_display_performance_statistics() {
 
 // Hook to display stats at the bottom of the page
 //add_action('wp_footer', 'greenlight_display_performance_statistics');
+
+//Remove core colors and gradients
+function remove_all_gradients_and_colors() {
+    // Remove color palette
+    add_theme_support('editor-color-palette', array());
+    
+    // Remove gradient palette
+    add_theme_support('editor-gradient-presets', array());
+    
+    // Filter out default gradients from theme.json
+    add_filter('wp_theme_json_data_default', function($theme_json) {
+        $data = $theme_json->get_data();
+        
+        // Remove default color palette
+        if (isset($data['settings']['color']['palette']['default'])) {
+            $data['settings']['color']['palette']['default'] = array();
+        }
+        
+        // Remove default gradient palette
+        if (isset($data['settings']['color']['gradients']['default'])) {
+            $data['settings']['color']['gradients']['default'] = array();
+        }
+        
+        // Disable all color and gradient features
+        $data['settings']['color']['defaultPalette'] = false;
+        $data['settings']['color']['defaultGradients'] = false;
+        $data['settings']['color']['custom'] = false;
+        $data['settings']['color']['customGradient'] = false;
+        
+        return new WP_Theme_JSON_Data($data, 'default');
+    });
+}
+add_action('after_setup_theme', 'remove_all_gradients_and_colors');
+
+//Function to detect if GL or GS plugin is active
+function is_glgs_active() {
+    return defined('GREENLIGHT_PLUGIN_VERSION') || defined('GREENSHIFT_PLUGIN_VERSION');
+}

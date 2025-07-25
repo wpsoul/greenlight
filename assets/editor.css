@@ -37,17 +37,7 @@ img.alignright {
 }
 
 .edit-post-visual-editor__post-title-wrapper h1 {
-	font-size: var(--wp--preset--font-size--xl)
-}
-
-/* Code
---------------------------------------------- */
-
-.wp-block-code code,
-.wp-block-preformatted {
-	overflow-wrap: normal;
-	overflow-x: scroll;
-	white-space: pre;
+	font-size: var(--wp--preset--font-size--xxl)
 }
 
 /* Comments
@@ -55,8 +45,10 @@ img.alignright {
 
 .wp-block-post-comments input:not([type=submit]),
 .wp-block-post-comments textarea {
-	border-color: var(--wp--preset--color--lightborder);
+	border-color: var(--wp--preset--color--border);
 }
+
+.comment-form-comment label{font-size:var(--wp--preset--font-size--s)}
 
 .wp-block-post-comments .commentlist {
 	margin-bottom: 40px;
@@ -68,7 +60,7 @@ img.alignright {
 }
 
 .wp-block-post-comments .comment-form-cookies-consent {
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--s);
 }
 
 .wp-block-post-comments .comment-author .avatar {
@@ -82,7 +74,7 @@ img.alignright {
 .logged-in-as,
 .comment-reply-title small a {
 	font-size: 75%;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .has-additional-background-color.wp-block-post-comments {
@@ -105,27 +97,6 @@ img.alignright {
 	opacity: .3;
 }
 
-
-/* Separator
---------------------------------------------- */
-
-.wp-block-separator {
-	opacity: 1;
-}
-
-.wp-block-separator:not(.is-style-dots),
-.wp-block-separator.has-background:not(.is-style-dots) {
-	border-bottom: 1px solid currentColor;
-	height: 1px;
-}
-
-.wp-block-separator.is-style-dots:before {
-	font-family: inherit;
-	font-size: var(--wp--preset--font-size--large);
-	letter-spacing: 10px;
-	padding-left: 10px;
-}
-
 /* Table
 --------------------------------------------- */
 
@@ -138,11 +109,11 @@ img.alignright {
 }
 
 .wp-block-table thead {
-	border-bottom: 3px solid var(--wp--preset--color--black);
+	border-bottom: 3px solid var(--wp--preset--color--base);
 }
 
 .wp-block-table tfoot {
-	border-top: 3px solid var(--wp--preset--color--black);
+	border-top: 3px solid var(--wp--preset--color--base);
 }
 
 .wp-block-table td,
@@ -151,7 +122,7 @@ img.alignright {
 .wp-block-table.is-style-stripes td,
 .wp-block-table.is-style-stripes th,
 .wp-block-table.is-style-stripes tr {
-	border: 1px solid var(--wp--preset--color--black);
+	border: 1px solid var(--wp--preset--color--base);
 }
 
 .wp-block-table th {
@@ -164,20 +135,20 @@ img.alignright {
 }
 
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-	background-color: var(--wp--preset--color--lightbg);
+	background-color: var(--wp--preset--color--border);
 }
 
 
 /*comments*/
 .wp-block-post-comments input[type=submit],
 .wp-block-post-comments-form input.submit {
-	background-color: var(--wp--preset--color--primary);
+	background-color: var(--wp--preset--color--brand);
 	border: 1px solid transparent;
 	border-radius: 0;
-	color: var(--wp--preset--color--textonprimary);
+	color: var(--wp--preset--color--text-on-brand);
 	cursor: pointer;
 	font-family: var(--wp--preset--font-family--primary);
-	font-size: var(--wp--preset--font-size--small) !important;
+	font-size: var(--wp--preset--font-size--s) !important;
 	padding: 10px 25px;
 	text-decoration: none;
 	white-space: normal;
@@ -200,7 +171,7 @@ img {
 
 .wp-block-post-comments-form input:not([type=submit]):not([type=checkbox]),
 .wp-block-post-comments-form textarea {
-	border-color: var(--wp--preset--color--lightborder);
+	border-color: var(--wp--preset--color--border);
 	font-size: .875em
 }
 
@@ -227,7 +198,7 @@ img {
 
 .logged-in-as {
 	font-size: 75%;
-	opacity: .5;
+	opacity: .75;
 }
 
 #reply-title {
@@ -261,9 +232,9 @@ img {
 	padding: 2px 8px;
 	text-decoration: none;
 	line-height: 20px;
-	font-size: var(--wp--preset--font-size--xsmall);
-	background-color: var(--wp--preset--color--primary) !important;
-	color: var(--wp--preset--color--textonprimary) !important;
+	font-size: var(--wp--preset--font-size--xs);
+	background-color: var(--wp--preset--color--brand) !important;
+	color: var(--wp--preset--color--text-on-brand) !important;
 }
 
 /*Woocommerce Gutenberg*/
@@ -283,8 +254,8 @@ img {
 .wc-block-product-search__fields input {
 	padding: 6px 8px;
 	line-height: 1.8;
-	font-size: var(--wp--preset--font-size--small);
-	border: 1px solid var(--wp--preset--color--lightborder);
+	font-size: var(--wp--preset--font-size--s);
+	border: 1px solid var(--wp--preset--color--border);
 	font-family: var(--wp--preset--font-family--primary);
 }
 
@@ -312,7 +283,7 @@ table.wc-block-mini-cart-items tbody td {
 }
 
 .woocommerce-breadcrumb {
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--s);
 }
 
 .woocommerce.wc-block-catalog-sorting select.orderby {
@@ -338,7 +309,7 @@ table.wc-block-mini-cart-items tbody td {
 	line-height: 1;
 	margin: 0;
 	border-radius: 2px;
-	background-color: var(--wp--preset--color--accent);
+	background-color: #cc0000;
 	color: #fff;
 	font-size: .7em;
 	z-index: 9;
@@ -381,17 +352,17 @@ table.wc-block-mini-cart-items tbody td {
 }
 
 .wc-block-components-price-slider__range-input-progress {
-	--range-color: var(--wp--preset--color--primary)
+	--range-color: var(--wp--preset--color--brand)
 }
 
 .wc-block-components-price-slider__controls .wc-block-components-price-slider__amount {
 	padding: 4px 7px;
-	font-size: var(--wp--preset--font-size--xsmall);
+	font-size: var(--wp--preset--font-size--xs);
 }
 
 .wc-block-active-filters .wc-block-active-filters__clear-all,
 .wc-block-components-filter-reset-button {
-	font-size: var(--wp--preset--font-size--xsmall);
+	font-size: var(--wp--preset--font-size--xs);
 }
 
 .wc-block-active-filters {
@@ -407,7 +378,7 @@ table.wc-block-mini-cart-items tbody td {
 
 .wp-block-woocommerce-checkout-order-summary-block {
 	padding: 20px;
-	border: 2px solid var(--wp--preset--color--lightborder);
+	border: 2px solid var(--wp--preset--color--border);
 	background: #00000003
 }
 
@@ -416,7 +387,7 @@ table.wc-block-mini-cart-items tbody td {
 }
 
 .wc-block-components-order-summary .wc-block-components-order-summary-item__quantity {
-	background: var(--wp--preset--color--accent);
+	background: #cc0000;
 	color: #fff;
 	border: none
 }
@@ -438,7 +409,7 @@ table.wc-block-mini-cart-items tbody td {
 .wp-block-woocommerce-checkout-order-summary-cart-items-block:after {
 	border: none;
 }
-.wc-blocks-components-select .wc-blocks-components-select__select{border-color: var(--wp--preset--color--lightborder)}.wc-block-components-checkout-step__description{opacity:0.6}
+.wc-blocks-components-select .wc-blocks-components-select__select{border-color: var(--wp--preset--color--border)}.wc-block-components-checkout-step__description{opacity:0.6}
 
 .wc-block-components-totals-wrapper:after,
 .wc-block-components-form .wc-block-components-text-input input[type=email],
@@ -453,11 +424,11 @@ table.wc-block-mini-cart-items tbody td {
 .wc-block-components-text-input input[type=url],
 .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input,
 .wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input {
-	border-color: var(--wp--preset--color--lightborder)
+	border-color: var(--wp--preset--color--border)
 }
 
 .wc-block-product-categories__dropdown select {
-	border: 1px solid var(--wp--preset--color--lightborder);
+	border: 1px solid var(--wp--preset--color--border);
 	border-radius: 0;
 	width: 100%;
 	padding: 9px 15px;
@@ -467,7 +438,7 @@ table.wc-block-mini-cart-items tbody td {
 	color: var(--wp--preset--color--inputtext);
 	font-weight: var(--wp--custom--font-weight--normal);
 	font-family: var(--wp--preset--font-family--primary);
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--s);
 	line-height: var(--wp--custom--line-height--medium)
 }
 
@@ -477,8 +448,8 @@ table.wc-block-mini-cart-items tbody td {
 	cursor: pointer;
 	font-weight: 700;
 	font-size: 17px;
-	background: var(--wp--preset--color--primary);
-	color: var(--wp--preset--color--textonprimary);
+	background: var(--wp--preset--color--brand);
+	color: var(--wp--preset--color--text-on-brand);
 	line-height: 17px;
 	text-align: center;
 	border-radius: 5px;

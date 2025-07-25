@@ -102,7 +102,7 @@ if ( ! comments_open() || !function_exists('wc_review_ratings_enabled')) {
 				<button class="wp-element-button" data-scrollto="#woo_comm_form"><?php esc_html_e('Write a review', 'greenlight');?></button>
 			</div>
 		</div>
-		<div style="margin-bottom:20px; margin-top:40px; border-top:1px solid var(--wp--preset--color--lightborder)"></div>
+		<div style="margin-bottom:20px; margin-top:40px; border-top:1px solid var(--wp--preset--color--border)"></div>
 
 		<div id="comments">
 			<?php if ( have_comments() ) : ?>

@@ -27,3 +27,4 @@ img.alignright {
 }
 
 footer.wp-block-template-part{margin-block-start: 0;}
+header{position: relative;z-index: 50;}

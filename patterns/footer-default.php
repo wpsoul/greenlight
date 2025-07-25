@@ -6,15 +6,15 @@
  * Block Types: core/template-part/footer
  */
 ?>
-<!-- wp:group {"align":"full","style":{"typography":{"fontSize":"18px"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"#cfcfcf45","width":"1px"}},"color":{"text":"#f0f0f0"}},"backgroundColor":"black","className":"is-style-default","layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull is-style-default has-black-background-color has-text-color has-background has-link-color" style="border-top-color:#cfcfcf45;border-top-width:1px;color:#f0f0f0;margin-top:0;margin-bottom:0;font-size:18px"><!-- wp:columns {"align":"wide","style":{"elements":{"link":{"color":[]}},"spacing":{"padding":{"top":"30px","bottom":"20px"}}}} -->
+<!-- wp:group {"align":"full","className":"is-style-default","style":{"typography":{"fontSize":"18px"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"#cfcfcf45","width":"1px"}}},"backgroundColor":"black","layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull is-style-default has-black-background-color has-background has-link-color" style="border-top-color:#cfcfcf45;border-top-width:1px;margin-top:0;margin-bottom:0;font-size:18px"><!-- wp:columns {"align":"wide","style":{"elements":{"link":{"color":[]}},"spacing":{"padding":{"top":"30px","bottom":"20px"}}}} -->
 <div class="wp-block-columns alignwide has-link-color" style="padding-top:30px;padding-bottom:20px"><!-- wp:column {"width":"37.51%"} -->
-<div class="wp-block-column" style="flex-basis:37.51%"><!-- wp:paragraph {"fontSize":"big"} -->
-<p class="has-big-font-size">Follow Us</p>
+<div class="wp-block-column" style="flex-basis:37.51%"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700"},"spacing":{"margin":{"top":"0","right":"0","bottom":"var:preset|spacing|50","left":"0"}}}} -->
+<p style="margin-top:0;margin-right:0;margin-bottom:var(--wp--preset--spacing--50);margin-left:0;font-style:normal;font-weight:700">Follow Us</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing lectus. Vestibulum mi  justo, luctus eu pellentesque vitae gravida non.</p>
+<!-- wp:paragraph {"fontSize":"s"} -->
+<p class="has-s-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing lectus. Vestibulum mi  justo, luctus eu pellentesque vitae gravida non.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -33,12 +33,12 @@
 <p style="margin-top:0;margin-right:0;margin-bottom:var(--wp--preset--spacing--50);margin-left:0;font-style:normal;font-weight:700">Contacts Us</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"color":{"text":"#929ba8"},"elements":{"link":{"color":{"text":"#929ba8"}}}},"fontSize":"xsmall"} -->
-<p class="has-text-color has-link-color has-xsmall-font-size" style="color:#929ba8;margin-bottom:var(--wp--preset--spacing--50)">Address street 28, Catalania, Ukraine</p>
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"typography":{"lineHeight":"1.8"}},"fontSize":"s"} -->
+<p class="has-s-font-size" style="margin-bottom:var(--wp--preset--spacing--50);line-height:1.8">Address street 28, Catalania, Ukraine</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"color":{"text":"#929ba8"},"elements":{"link":{"color":{"text":"#929ba8"}}}},"fontSize":"xsmall"} -->
-<p class="has-text-color has-link-color has-xsmall-font-size" style="color:#929ba8;margin-bottom:var(--wp--preset--spacing--50)">+34 999 223492356<br>hello@myemail.com</p>
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"typography":{"lineHeight":"1.8"}},"fontSize":"s"} -->
+<p class="has-s-font-size" style="margin-bottom:var(--wp--preset--spacing--50);line-height:1.8">+34 999 223492356<br>hello@myemail.com</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -47,8 +47,8 @@
 <p style="margin-top:0;margin-right:0;margin-bottom:var(--wp--preset--spacing--50);margin-left:0;font-style:normal;font-weight:700">Office Time</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"color":{"text":"#929ba8"},"elements":{"link":{"color":{"text":"#929ba8"}}}},"fontSize":"xsmall"} -->
-<p class="has-text-color has-link-color has-xsmall-font-size" style="color:#929ba8;margin-bottom:var(--wp--preset--spacing--50)">9AM - 4PM<br>(Sunday closed)</p>
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"typography":{"lineHeight":"1.8"}},"fontSize":"s"} -->
+<p class="has-s-font-size" style="margin-bottom:var(--wp--preset--spacing--50);line-height:1.8">9AM - 4PM<br>(Sunday closed)</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -57,8 +57,8 @@
 <p style="margin-top:0;margin-right:0;margin-bottom:var(--wp--preset--spacing--50);margin-left:0;font-style:normal;font-weight:700">Connect</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:list {"style":{"typography":{"lineHeight":"2"}},"className":"is-style-nounderline","fontSize":"small"} -->
-<ul class="is-style-nounderline has-small-font-size" style="line-height:2"><!-- wp:list-item -->
+<!-- wp:list {"className":"is-style-nounderline","style":{"typography":{"lineHeight":"2"},"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"s"} -->
+<ul style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;line-height:2" class="wp-block-list is-style-nounderline has-s-font-size"><!-- wp:list-item -->
 <li><a href="#">Facebook</a></li>
 <!-- /wp:list-item -->
 
@@ -74,8 +74,8 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"border":{"top":{"color":"#cfcfcf45","width":"1px"}},"spacing":{"margin":{"top":"0","bottom":"0"}},"color":{"text":"#f0f0f0"}},"backgroundColor":"black","className":"has-small-font-size is-style-default","layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-small-font-size is-style-default has-black-background-color has-text-color has-background has-link-color" style="border-top-color:#cfcfcf45;border-top-width:1px;color:#f0f0f0;margin-top:0;margin-bottom:0"><!-- wp:group {"align":"wide","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
+<!-- wp:group {"align":"full","className":"has-small-font-size is-style-default","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"border":{"top":{"color":"#cfcfcf45","width":"1px"}},"spacing":{"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"black","layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-small-font-size is-style-default has-black-background-color has-background has-link-color" style="border-top-color:#cfcfcf45;border-top-width:1px;margin-top:0;margin-bottom:0"><!-- wp:group {"align":"wide","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 <div class="wp-block-group alignwide"><!-- wp:paragraph -->
 <p>Your Company LLC</p>
 <!-- /wp:paragraph -->
