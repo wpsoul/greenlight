@@ -131,6 +131,9 @@ function greenlight_theme_enqueue_style_sheet() {
 // Include block patterns.
 require GREENLIGHT_THEME_PATH . '/inc/block-patterns.php';
 
+// Include GitHub Theme Updater
+require GREENLIGHT_THEME_PATH . '/inc/github-updater-config.php';
+
 // Include Woocommerce
 if (class_exists('Woocommerce')) {
 require GREENLIGHT_THEME_PATH . '/inc/woocommerce/functions.php';
