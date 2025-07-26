@@ -9,7 +9,7 @@
  */
 
 if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
-	define('GREENLIGHT_THEME_VERSION', '1.0');
+	define('GREENLIGHT_THEME_VERSION', '1.1');
 }
 if ( !defined( 'GREENLIGHT_THEME_DIR' ) ) {
 	define('GREENLIGHT_THEME_DIR', get_template_directory_uri());
@@ -227,5 +227,5 @@ add_action('after_setup_theme', 'remove_all_gradients_and_colors');
 
 //Function to detect if GL or GS plugin is active
 function is_glgs_active() {
-    return defined('GREENLIGHT_PLUGIN_VERSION') || defined('GREENSHIFT_PLUGIN_VERSION');
+    return defined('GL_PLUGIN_VERSION') || defined('GREENSHIFT_DIR_URL');
 }
