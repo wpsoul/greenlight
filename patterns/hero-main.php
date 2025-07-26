@@ -42,11 +42,13 @@
 
 <!-- wp:column {"width":"33.33%"} -->
 <div class="wp-block-column" style="flex-basis:33.33%">
+    <?php if(is_glgs_active()): ?>
 <!-- wp:greenshift-blocks/element {"id":"gsbp-b06bf08","inlineCssStyles":".gsbp-b06bf08{display:flex;flex-direction:row;justify-content:flex-end;}\n                    @media (max-width: 575.98px){\n                        .gsbp-b06bf08 {\n                            display: none !important;\n                        }\n                    }\n                    \n                    @media (min-width: 576px) and (max-width: 767.98px){\n                        .gsbp-b06bf08 {\n                            display: none !important;\n                        }\n                    }\n                    \n                    @media (min-width: 768px) and (max-width: 991.98px){\n                        .gsbp-b06bf08 {\n                            display: none !important;\n                        }\n                    }\n                    ","type":"inner","localId":"gsbp-b06bf08","styleAttributes":{"display":["flex"],"flexDirection":["row"],"justifyContent":["flex-end"],"hideOnMobile_Extra":true,"hideOnLandscape_Extra":true,"hideOnTablet_Extra":true}} -->
 <div class="gsbp-b06bf08"><!-- wp:image {"align":"right","style":{"spacing":{"margin":{"top":"44px","right":"0px","bottom":"0px","left":"0px"}}}} -->
 <figure class="wp-block-image alignright" style="margin-top:44px;margin-right:0px;margin-bottom:0px;margin-left:0px"><img src="data:image/svg+xml,%3Csvg%20width%3D%22162%22%20height%3D%22162%22%20viewBox%3D%220%200%20162%20162%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M81%200L83.4069%2072.8093C83.4353%2073.6682%2084.4623%2074.0936%2085.0897%2073.5063L138.276%2023.7243L88.4937%2076.9103C87.9064%2077.5377%2088.3318%2078.5647%2089.1907%2078.5931L162%2081L89.1907%2083.4069C88.3318%2083.4353%2087.9064%2084.4623%2088.4937%2085.0897L138.276%20138.276L85.0897%2088.4937C84.4623%2087.9064%2083.4353%2088.3318%2083.4069%2089.1907L81%20162L78.5931%2089.1907C78.5647%2088.3318%2077.5377%2087.9064%2076.9103%2088.4937L23.7243%20138.276L73.5063%2085.0897C74.0936%2084.4623%2073.6682%2083.4353%2072.8093%2083.4069L0%2081L72.8093%2078.5931C73.6682%2078.5647%2074.0936%2077.5377%2073.5063%2076.9103L23.7243%2023.7243L76.9103%2073.5063C77.5377%2074.0936%2078.5647%2073.6682%2078.5931%2072.8093L81%200Z%22%20fill%3D%22%2300BC6D%22/%3E%3C/svg%3E" alt=""/></figure>
 <!-- /wp:image --></div>
-<!-- /wp:greenshift-blocks/element -->    
+<!-- /wp:greenshift-blocks/element -->  
+<?php endif; ?>  
 </div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
