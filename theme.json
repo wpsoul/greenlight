@@ -44,13 +44,7 @@
 			"customGradient": true,
 			"defaultPalette": false,
 			"defaultGradients": false,
-			"gradients": [
-				{
-					"slug": "diagonal-brand-to-hover",
-					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--brand) 0%,var(--wp--preset--color--brand-hover) 100%)",
-					"name": "Diagonal brand to hover"
-				}
-			],
+			"gradients": [],
 			"palette": [
 				{
 					"name": "Brand",

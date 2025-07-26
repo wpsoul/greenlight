@@ -5,7 +5,7 @@
  * @package GreenLight
  * @author  Wpsoul
  * @license GNU General Public License v2 or later
- * @link    https://greenlightblocks.com/
+ * @link    https://greenlightbuilder.pro/
  */
 
 if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
