@@ -134,11 +134,6 @@ require GREENLIGHT_THEME_PATH . '/inc/block-patterns.php';
 // Include GitHub Theme Updater
 require GREENLIGHT_THEME_PATH . '/inc/github-updater-config.php';
 
-// Include GitHub Updater Debug (only in debug mode)
-if (defined('WP_DEBUG') && WP_DEBUG) {
-    require GREENLIGHT_THEME_PATH . '/inc/github-updater-debug.php';
-}
-
 // Include Woocommerce
 if (class_exists('Woocommerce')) {
 require GREENLIGHT_THEME_PATH . '/inc/woocommerce/functions.php';
