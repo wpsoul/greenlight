@@ -31,11 +31,7 @@ function greenlight_theme_register_assets(){
 	wp_register_style( 'greenlight-style', GREENLIGHT_THEME_DIR . '/assets/style.min.css', array(), GREENLIGHT_THEME_VERSION );
 
 
-	//Core styles
-	wp_register_style('greenlight_core_comments', GREENLIGHT_THEME_DIR . '/assets/coreblocks/comments.css', array(), GREENLIGHT_THEME_VERSION);
-	wp_register_style('greenlight-comment-query', GREENLIGHT_THEME_DIR . '/assets/coreblocks/commentquery.css', array(), GREENLIGHT_THEME_VERSION);
-	wp_register_style('greenlight_core_table', GREENLIGHT_THEME_DIR . '/assets/coreblocks/table.css', array(), GREENLIGHT_THEME_VERSION);
-	wp_register_style('greenlight_core_postnavigation', GREENLIGHT_THEME_DIR . '/assets/coreblocks/postnavigation.css', array(), GREENLIGHT_THEME_VERSION);
+	//Core styles - All moved to theme.json as inline styles
 
 	register_block_style(
         'core/group',
@@ -100,11 +96,7 @@ if ( ! function_exists( 'greenlight_theme_setuphooks' ) ) {
 		// Remove core block patterns.
 		remove_theme_support( 'core-block-patterns' );
 
-		//add conditional assets to core blocks
-		wp_enqueue_block_style( 'core/comments', array('handle'=>'greenlight_core_comments', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/comments.css', 'version'=> GREENLIGHT_THEME_VERSION) );
-		wp_enqueue_block_style( 'core/comments-query-loop', array('handle'=>'greenlight-comment-query', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/commentquery.css', 'version'=> GREENLIGHT_THEME_VERSION) );
-		wp_enqueue_block_style( 'core/table', array('handle'=>'greenlight_core_table', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/table.css', 'version'=> GREENLIGHT_THEME_VERSION) );
-		wp_enqueue_block_style( 'core/post-navigation-link', array('handle'=>'greenlight_core_postnavigation', 'path'=>GREENLIGHT_THEME_PATH .'/assets/coreblocks/postnavigation.css', 'version'=> GREENLIGHT_THEME_VERSION) );
+		//Core block styles moved to theme.json as inline styles
 
 	}
 }
