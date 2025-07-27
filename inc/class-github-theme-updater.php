@@ -62,6 +62,19 @@ class GreenLight_GitHub_Theme_Updater {
             );
             
             $transient->response[$this->theme_slug] = $theme_data;
+        }else {
+            // No update is available.
+            $item = array(
+                'theme'        => $this->theme_slug,
+                'new_version'  => $current_version,
+                'url'          => '',
+                'package'      => '',
+                'requires'     => '',
+                'requires_php' => '',
+            );
+            // Adding the "mock" item to the `no_update` property is required
+            // for the enable/disable auto-updates links to correctly appear in UI.
+            $transient->no_update[$this->theme_slug] = $item;
         }
         
         return $transient;
@@ -161,10 +174,15 @@ class GreenLight_GitHub_Theme_Updater {
      */
     public function upgrader_source_selection($source, $remote_url, $upgrader, $hook_extra) {
         if (isset($hook_extra['theme']) && $hook_extra['theme'] === $this->theme_slug) {
-            // Extract the theme from the zip file
-            $new_source = trailingslashit($source) . $this->github_repo . '-' . $this->github_branch;
-            if (is_dir($new_source)) {
-                return $new_source;
+            // GitHub creates a folder named {repo}-{branch}, but WordPress expects {theme_slug}
+            $github_folder = trailingslashit($source) . $this->github_repo . '-' . $this->github_branch;
+            $theme_folder = trailingslashit($source) . $this->theme_slug;
+            
+            if (is_dir($github_folder)) {
+                // Rename the GitHub folder to match the expected theme slug
+                if (rename($github_folder, $theme_folder)) {
+                    return $theme_folder;
+                }
             }
         }
         

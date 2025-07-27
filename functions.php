@@ -9,7 +9,7 @@
  */
 
 if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
-	define('GREENLIGHT_THEME_VERSION', '1.4');
+	define('GREENLIGHT_THEME_VERSION', '1.5');
 }
 if ( !defined( 'GREENLIGHT_THEME_DIR' ) ) {
 	define('GREENLIGHT_THEME_DIR', get_template_directory_uri());
@@ -133,6 +133,11 @@ require GREENLIGHT_THEME_PATH . '/inc/block-patterns.php';
 
 // Include GitHub Theme Updater
 require GREENLIGHT_THEME_PATH . '/inc/github-updater-config.php';
+
+// Include GitHub Updater Debug (only in debug mode)
+if (defined('WP_DEBUG') && WP_DEBUG) {
+    require GREENLIGHT_THEME_PATH . '/inc/github-updater-debug.php';
+}
 
 // Include Woocommerce
 if (class_exists('Woocommerce')) {
