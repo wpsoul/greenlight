@@ -49,12 +49,12 @@
 				{
 					"name": "Brand",
 					"slug": "brand",
-					"color": "#0FA034"
+					"color": "#33EFAB"
 				},
 				{
 					"name": "Text on Brand",
 					"slug": "text-on-brand",
-					"color": "#fffffc"
+					"color": "#000002"
 				},
 				{
 					"name": "Content Text Color",
