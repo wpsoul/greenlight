@@ -13,7 +13,7 @@
 				{
 					"name": "Text on Brand",
 					"slug": "text-on-brand",
-					"color": "#fffffc"
+					"color": "#000002"
 				},
 				{
 					"name": "Content Text Color",
@@ -33,7 +33,7 @@
 				{
 					"name": "Background Color",
 					"slug": "background",
-					"color": "#222222"
+					"color": "#061013"
 				},
 				{
 					"name": "Base Color",

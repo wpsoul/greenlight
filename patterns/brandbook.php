@@ -2035,14 +2035,10 @@
 <p><em>--wp--preset--color--card-base</em> - background color of card<br><em>--wp--preset--color--card-border</em> - border color of card<br><em>--wp--preset--color--card-text</em> - text color of card<br><em>--wp--custom--card--border-radius</em> - border radius for query loop<br><em>--wp--custom--card--spacing</em> - spacing in card</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph --></div>
+</div>
 <!-- /wp:greenshift-blocks/element -->
 
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph --></div>
+</div>
 <!-- /wp:greenshift-blocks/element --></div>
 <!-- /wp:greenshift-blocks/element -->
 <?php endif; ?>
