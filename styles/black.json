@@ -21,6 +21,11 @@
 					"color": "#f9f9f9"
 				},
 				{
+					"name": "Heading Text Color",
+					"slug": "heading",
+					"color": "#ffffff"
+				},
+				{
 					"name": "Border Color",
 					"slug": "border",
 					"color": "#00000012"
@@ -33,17 +38,32 @@
 				{
 					"name": "Base Color",
 					"slug": "base",
-					"color": "#000001"
+					"color": "#fffffe"
 				},
 				{
 					"name": "Contrast Color",
 					"slug": "contrast",
-					"color": "#fffffe"
+					"color": "#000001"
 				},
 				{
 					"name": "Light Grey (for Meta text)",
 					"slug": "lightgrey",
 					"color": "#8998aa"
+				},
+				{
+					"name": "Card Background Color",
+					"slug": "card-base",
+					"color": "#222222"
+				},
+				{
+					"name": "Card Border Color",
+					"slug": "card-border",
+					"color": "#000000"
+				},
+				{
+					"name": "Card Text Color",
+					"slug": "card-text",
+					"color": "#fffffd"
 				}
 			]
 		}
