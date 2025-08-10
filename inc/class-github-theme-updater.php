@@ -178,15 +178,47 @@ class GreenLight_GitHub_Theme_Updater {
             $github_folder = trailingslashit($source) . $this->github_repo . '-' . $this->github_branch;
             $theme_folder = trailingslashit($source) . $this->theme_slug;
             
+            // Check if the GitHub folder exists
             if (is_dir($github_folder)) {
+                // Remove existing theme folder if it exists
+                if (is_dir($theme_folder)) {
+                    $this->remove_directory($theme_folder);
+                }
+                
                 // Rename the GitHub folder to match the expected theme slug
                 if (rename($github_folder, $theme_folder)) {
                     return $theme_folder;
                 }
             }
+            
+            // Fallback: if the folder is already named correctly, return as is
+            if (is_dir($theme_folder)) {
+                return $theme_folder;
+            }
         }
         
         return $source;
+    }
+    
+    /**
+     * Recursively remove a directory
+     */
+    private function remove_directory($dir) {
+        if (!is_dir($dir)) {
+            return false;
+        }
+        
+        $files = array_diff(scandir($dir), array('.', '..'));
+        foreach ($files as $file) {
+            $path = $dir . '/' . $file;
+            if (is_dir($path)) {
+                $this->remove_directory($path);
+            } else {
+                unlink($path);
+            }
+        }
+        
+        return rmdir($dir);
     }
     
     /**
