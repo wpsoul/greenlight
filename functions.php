@@ -9,7 +9,7 @@
  */
 
 if ( !defined( 'GREENLIGHT_THEME_VERSION' ) ) {
-	define('GREENLIGHT_THEME_VERSION', '2.0');
+	define('GREENLIGHT_THEME_VERSION', '2.1');
 }
 if ( !defined( 'GREENLIGHT_THEME_DIR' ) ) {
 	define('GREENLIGHT_THEME_DIR', get_template_directory_uri());

@@ -18,13 +18,4 @@ img {
     height: auto
 }
 
-img.alignleft {
-    margin-right: 2em
-}
-
-img.alignright {
-    margin-left: 2em
-}
-
-footer.wp-block-template-part{margin-block-start: 0;}
 header{position: relative;z-index: 50;}
